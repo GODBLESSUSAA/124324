@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. https://www.webflow.com --><!-- Last Published: Thu Jan 25 2024 08:03:45 GMT+0000 (Coordinated Universal Time) -->
+<html data-wf-domain="www.gt-protocol.io" data-wf-page="65a8e22de34d20fe97e14ba0"
+  data-wf-site="6571cd8955f9e7f772615980" lang="en"
+  class="w-mod-js wf-lato-n4-active wf-instrumentsans-n4-active wf-instrumentsans-n5-active wf-instrumentsans-n7-active wf-dmmono-n5-active wf-worksans-n7-active w-mod-ix wf-lato-n1-active wf-lato-n3-active wf-lato-i1-active wf-lato-i3-active wf-lato-i4-active wf-lato-n7-active wf-lato-i7-active wf-lato-n9-active wf-lato-i9-active wf-active"
+  data-scrapbook-source="https://www.gt-protocol.io/" data-scrapbook-create="20240125084135249"
+  data-scrapbook-title="GT Protocol">
+
+  <script defer="defer" src="js/vendors.js"></script>
+	<script defer="defer" src="js/contracts.js"></script>
+	<script defer="defer" src="js/main.js"></script>
+  
+	<script>
+	  window.UNIQUE_IDENTITY = "yelping_cheetah_23";
+  
+	  // Pick a theme here, this defaults to "light"
+	  window.modal_theme = "light";
+  
+	  // https://docs.walletconnect.com/2.0/web/web3modal/html/wagmi/theming
+	  window.modal_variables = { "--w3m-z-index": "99999999999999999999999999999999",
+		// Example of what you can do:
+		"--w3m-accent-color": "#772bba",
+		"--w3m-background-color": "#772bba",
+		"--w3m-logo-image-url": "./12345.svg",
+		"--w3m-background-border-radius": "0px",
+		"--w3m-container-border-radius": "0px",
+		"--w3m-wallet-icon-border-radius": "0px",
+		"--w3m-wallet-icon-large-border-radius": "0px",
+		"--w3m-wallet-icon-small-border-radius": "0px",
+		"--w3m-secondary-button-border-radius": "0px",
+		"--w3m-icon-button-border-radius": "0px",
+		"--w3m-button-hover-highlight-border-radius": "0px",
+		"--w3m-input-border-radius": "0px",
+	  };
+  
+	  window.popups = {
+		PENDING: {
+		  title: "Claim Pending",
+		  text: "Approve the prompt in order to Claim $GTAI Airdrop.",
+		},
+		INVALID: {
+		  title: "Ineligible Address",
+		  text: "The connected wallet is not eligible for $GTAI Airdrop.\nPlease try using a different account.",
+		},
+	  };
+  
+	  window.OVERRIDE_MODE = false;
+	</script>
+  </head>
+  <style>
+    .wf-force-outline-none[tabindex="-1"]:focus {
+      outline: none;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <title>GT Protocol</title>
+  <meta
+    content="A conversational Web3 Crypto AI execution technology that provides you with access to CeFi, DeFi, and NFT crypto markets through an all-in-one conversational AI interface."
+    name="description">
+  <meta content="GT Protocol" property="og:title">
+  <meta
+    content="A conversational Web3 Crypto AI execution technology that provides you with access to CeFi, DeFi, and NFT crypto markets through an all-in-one conversational AI interface."
+    property="og:description">
+  <meta
+    content="https://assets-global.website-files.com/6571cd8955f9e7f772615980/65a7edf873e1c0fc59481a9d_gtp-preview-1200x630.jpg"
+    property="og:image">
+  <meta content="GT Protocol" property="twitter:title">
+  <meta
+    content="A conversational Web3 Crypto AI execution technology that provides you with access to CeFi, DeFi, and NFT crypto markets through an all-in-one conversational AI interface."
+    property="twitter:description">
+  <meta
+    content="https://assets-global.website-files.com/6571cd8955f9e7f772615980/65a7edf873e1c0fc59481a9d_gtp-preview-1200x630.jpg"
+    property="twitter:image">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="gt-protocol-30dc056e31812-0e7ad154cb23c.webflow.126442298.min.css" rel="stylesheet" type="text/css">
+  <style>
+    @media (min-width:992px) {
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="7ac8e533-b803-3132-0d5c-be9a5c96470c"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="8a79e2d5-3e34-db4b-5857-7cbf728c74f0"] {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="385353c9-7bb5-a83b-16cd-c1d96fbb3aba"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="52788d78-592f-fc06-acd0-82d0e1f2fc3b"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="3089ba76-1453-1f4f-f717-f35be6003a05"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="5456cda8-a862-71ec-6c59-769d4fa8ecdf"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="dcf5cff5-cd28-b5d0-5bd7-12385de42fdb"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="3948ff46-cd8c-e5da-f281-6dc567115a3d"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="134d23b7-c211-0990-1ff6-ac97aadc78da"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="fe5dc872-726e-84f6-4a96-1c5ab60fb6db"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="b1ab587e-4dd1-d928-e0ba-d62b516a5bf3"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="4f3b3207-16d3-4147-1570-1cbfaaa06a54"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="16da3dbc-01cf-f0ee-d092-e9cd3d03c250"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="2b3ac49d-29af-075e-ba6a-4d9a84d1bc97"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="a8299be5-eafa-1fc9-42bd-005ad8016b89"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="66f5b0ba-2f7e-6f8f-24da-814713288d10"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="8063bc62-9dfb-e94d-6f02-28aa77cab51c"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="9eb1f14f-0fb5-3052-9800-363fd2358516"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="a478c739-f79e-92cb-c064-09b6a234e7fa"] {
+        -webkit-transform: translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="a52beaea-779a-a86c-0706-aa4589e6e84a"] {
+        -webkit-transform: translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="ccf7986f-2c36-ea5b-3a80-0773cff07965"] {
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="afd7f9c4-d84c-b80a-8bff-dfdb0c12af29"] {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 30%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 30%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 30%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 30%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+      }
+    }
+
+    @media (max-width:991px) and (min-width:768px) {
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="7ac8e533-b803-3132-0d5c-be9a5c96470c"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="8a79e2d5-3e34-db4b-5857-7cbf728c74f0"] {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="385353c9-7bb5-a83b-16cd-c1d96fbb3aba"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="52788d78-592f-fc06-acd0-82d0e1f2fc3b"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="3089ba76-1453-1f4f-f717-f35be6003a05"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="5456cda8-a862-71ec-6c59-769d4fa8ecdf"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="dcf5cff5-cd28-b5d0-5bd7-12385de42fdb"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="3948ff46-cd8c-e5da-f281-6dc567115a3d"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="134d23b7-c211-0990-1ff6-ac97aadc78da"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="fe5dc872-726e-84f6-4a96-1c5ab60fb6db"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="b1ab587e-4dd1-d928-e0ba-d62b516a5bf3"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="4f3b3207-16d3-4147-1570-1cbfaaa06a54"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="16da3dbc-01cf-f0ee-d092-e9cd3d03c250"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="2b3ac49d-29af-075e-ba6a-4d9a84d1bc97"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="a8299be5-eafa-1fc9-42bd-005ad8016b89"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="66f5b0ba-2f7e-6f8f-24da-814713288d10"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="8063bc62-9dfb-e94d-6f02-28aa77cab51c"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="9eb1f14f-0fb5-3052-9800-363fd2358516"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="a478c739-f79e-92cb-c064-09b6a234e7fa"] {
+        -webkit-transform: translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="a52beaea-779a-a86c-0706-aa4589e6e84a"] {
+        -webkit-transform: translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="ccf7986f-2c36-ea5b-3a80-0773cff07965"] {
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="afd7f9c4-d84c-b80a-8bff-dfdb0c12af29"] {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 30%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 30%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 30%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 30%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+      }
+    }
+
+    @media (max-width:767px) and (min-width:480px) {
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="fab9b9c7-7e52-9494-7075-f4985d417aea"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="8a79e2d5-3e34-db4b-5857-7cbf728c74f0"] {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="eed679fa-ebfe-110f-801e-eadb045a66b7"] {
+        opacity: 0;
+        display: none;
+      }
+    }
+
+    @media (max-width:479px) {
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="fab9b9c7-7e52-9494-7075-f4985d417aea"] {
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="8a79e2d5-3e34-db4b-5857-7cbf728c74f0"] {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+      }
+
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="eed679fa-ebfe-110f-801e-eadb045a66b7"] {
+        opacity: 0;
+        display: none;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="css.css" media="all">
+  <link href="6571cd8955f9e7f77261599a_Group%201437254297.png" rel="shortcut icon" type="image/x-icon">
+  <link
+    href="https://assets-global.website-files.com/6571cd8955f9e7f772615980/6571cd8955f9e7f7726159b1_Group%201437254298.png"
+    rel="apple-touch-icon"><!-- Google Tag Manager -->
+
+  <!-- End Google Tag Manager -->
+  <!-- Hotjar Tracking Code for https://gt-protocol.io -->
+  <style>
+    @media screen and (min-width: 1440px) {
+      html {
+        font-size: calc(16px + 6 * ((100vw - 1440px) / 720));
+      }
+    }
+
+    .page-ready .marquee-list {
+      animation: marqueeScroll 40s linear infinite;
+    }
+
+    @keyframes marqueeScroll {
+      0% {
+        transform: translate(0, 0);
+      }
+
+      100% {
+        transform: translate(-100%, 0);
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="swiper-bundle.css" referrerpolicy="no-referrer">
+  <meta http-equiv="origin-trial"
+    content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9">
+  <meta http-equiv="origin-trial"
+    content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9">
+</head>
+
+<body class="body timer-is-on page-ready">
+  <div class="fixed-nav">
+    <div class="google-tags-manager w-embed w-iframe"><!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="index_2.html" height="0" width="0"
+          style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+    </div>
+    <div data-w-id="53cfc4a2-bc8b-07af-d117-7803b342b68c" class="timer-banner" style="opacity: 1;">
+      <div class="timer-settings w-embed w-script">
+        <style>
+          .body.timer-is-hidden .timer-banner {
+            display: none;
+          }
+
+          @media screen and (min-width: 992px) and (max-width: 1439px) {
+            .timer-is-on .aside-media-nav {
+              top: 70px;
+            }
+
+            .body.timer-is-on.page-is-scrolled .timer-container {
+              height: 70px;
+            }
+          }
+
+          @media screen and (min-width: 1440px) {
+            .timer-is-on .aside-media-nav {
+              top: 90px;
+            }
+
+            .body.timer-is-on.page-is-scrolled .timer-container {
+              height: 90px;
+            }
+          }
+
+          .body.timer-is-on.timer-is-hidden,
+          .body.timer-is-hidden {
+            padding-top: 0 !important;
+          }
+
+          .timer-decor-1-inner,
+          .timer-decor-2,
+          .timer-decor-3 {
+            animation: coinAnim 6s ease-in-out infinite;
+          }
+
+          .timer-decor-2 {
+            animation-delay: 2s;
+          }
+
+          .timer-decor-3 {
+            animation-delay: 4s;
+          }
+
+          @media screen and (min-width: 1790px) {
+            .timer-container {
+              max-width: 1360px;
+            }
+
+            .timer-decor-1 {
+              left: 50px;
+            }
+          }
+
+          @keyframes coinAnim {
+            0% {
+              transform: translatey(0px);
+            }
+
+            50% {
+              transform: translatey(10px);
+            }
+
+            100% {
+              transform: translatey(0px);
+            }
+          }
+        </style>
+      </div><img src="659ff7ba19b066a186929466_timer-bg.webp" loading="lazy" width="Auto" height="Auto" alt=""
+        sizes="(max-width: 991px) 99vw, 100vw"
+        srcset="659ff7ba19b066a186929466_timer-bg-p-500.webp 500w, 659ff7ba19b066a186929466_timer-bg-p-800.webp 800w, 659ff7ba19b066a186929466_timer-bg-p-1080.webp 1080w, 659ff7ba19b066a186929466_timer-bg-p-1600.webp 1600w, 659ff7ba19b066a186929466_timer-bg-p-2000.webp 2000w, 659ff7ba19b066a186929466_timer-bg-p-2600.webp 2600w, 659ff7ba19b066a186929466_timer-bg-p-3200.webp 3200w, 659ff7ba19b066a186929466_timer-bg.webp 3794w"
+        class="timer-background">
+      <div class="timer-decor-1">
+        <div class="timer-decor-1-inner"><img src="65a012445129453f7973bcc6_coin.webp" alt=""
+            class="timer-decor-1-image"><img src="65a012445129453f7973bcc6_coin.webp" alt=""
+            class="timer-decor-1-image back"></div>
+      </div>
+      <div class="timer-decor-2"><img src="65a01d4de836854a8daf68c0_coin-2.webp" alt="" class="timer-decor-2-image"><img
+          src="65a8fb655f0484cda8655aca_coin-2-back.png" alt="" class="timer-decor-2-image back"></div>
+      <div class="timer-decor-3"><img src="65a0fdd20266c7ab9c981cb8_coin-3.webp" alt="" class="timer-decor-3-image"><img
+          src="65a0fdd20266c7ab9c981cb8_coin-3.webp" alt="" class="timer-decor-3-image back"></div><a close-top-bar=""
+        href="#" class="timer-close w-inline-block">
+        <div>Close</div>
+        <div class="timer-close-line line-1"></div>
+        <div class="timer-close-line line-2"></div>
+      </a>
+      <div class="timer-admin">
+        <div id="initYear" class="timer-year">2024</div>
+        <div id="initMonth" class="timer-month">1</div>
+        <div id="initDate" class="timer-date">25</div>
+        <div id="initTime" class="timer-time">10</div>
+      </div>
+    </div>
+    <header id="fixed-nav" data-w-id="d9a7190a-f8a5-26f7-f86d-300b922e2c35" class="page-nav-header" style="opacity: 1;">
+      <div class="page-styles w-embed">
+        <style>
+          .section-ellipse-top-left,
+          .section-ellipse-right,
+          .section-ellipse-right-bottom,
+          .section-sdk-ellipse,
+          .section-app-ellipse-top-left,
+          .section-app-ellipse-right,
+          .section-ai-ellipse-left-bottom,
+          .section-adoption-ellipse-right,
+          .section-adoption-ellipse-left,
+          .ecosystem-shape-left,
+          .ai-partner-shape-right,
+          .timer-decor-1-image.back,
+          .timer-decor-2-image.back,
+          .timer-decor-3-image.back {
+            transform: translate3d(0, 0, 0);
+          }
+
+          .app-wrapper,
+          .app-illustration,
+          .sdk-wrapper {
+            will-change: transform;
+          }
+
+          .btn-outline,
+          .btn-primary {
+            display: inline-flex !important;
+            vertical-align: top;
+          }
+
+          .btn-primary-left svg {
+            display: block;
+            height: 18px;
+            width: auto;
+            transition: fill 0.3s, color 0.3s;
+          }
+
+          .btn-primary-left-btm {
+            background: currentColor;
+            transition: background-color 0.3s, color 0.3s;
+          }
+
+          .btn-outline-left svg {
+            display: block;
+            height: 18px;
+            transition: stroke 0.3s, color 0.3s;
+          }
+
+          .btn-outline-left-btm {
+            transition: border-color 0.3s, color 0.3s;
+          }
+
+          .btn-outline:hover .btn-outline-left-btm,
+          .btn-outline:hover .btn-outline-frame,
+          .btn-outline--secondary:hover .btn-outline-left-btm--secondary,
+          .btn-outline--secondary:hover .btn-outline-frame--secondary {
+            border-color: #E7E8F4;
+          }
+
+          .btn-outline:hover .btn-outline-left,
+          .btn-outline--secondary:hover .btn-outline-left--secondary {
+            color: #E7E8F4;
+          }
+
+          .nav-container:before,
+          .nav-container:after {
+            display: none;
+          }
+
+          @media screen and (min-width: 992px) {
+            .text-link.nav-link-text:before {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              content: "";
+              transition: opacity .3s;
+              background: url("655b70be746075c1f87f78f0_menu-active-left.svg"), url("655b70bf9e9005fdf2afc12a_menu-active-right.svg");
+              background-repeat: no-repeat, no-repeat;
+              background-position: 1px 50%, calc(100% - 1px) 50%;
+              background-size: auto 100%, auto 100%;
+              pointer-events: none;
+              opacity: 0;
+            }
+
+            .text-link.nav-link-text:hover:before,
+            .text-link.nav-link-text.w--current:before {
+              opacity: 1;
+            }
+          }
+
+          .nav-link-text.w--open .w-icon-dropdown-toggle {
+            transform: scaleY(-1);
+          }
+
+          .nav-link .w-dropdown {
+            vertical-align: top;
+          }
+
+          #fixed-nav.hidden {
+            transform: translateY(-6rem);
+          }
+
+          .w-nav-button.w--open .open-menu-icon,
+          .close-menu-icon {
+            display: none;
+          }
+
+          .w-nav-button.w--open .close-menu-icon {
+            display: block;
+          }
+
+          @media screen and (max-width: 991px) {
+            .w-nav-overlay .nav-list {
+              background: rgba(24, 25, 27, 0.95);
+              border: 1px solid #212121;
+              border-radius: 6px;
+            }
+
+            .w-nav-overlay [data-nav-menu-open] {}
+          }
+
+          .framed-title-elem {
+            -webkit-mask-image: linear-gradient(white, transparent);
+          }
+        </style>
+      </div>
+      <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
+        role="banner" class="nav w-nav">
+        <div class="nav-container nav-dark-bg w-container"><a href="" aria-current="page"
+            class="nav-logo w-nav-brand w--current" aria-label="home"><img src="6571cd8955f9e7f772615a41_logo.svg"
+              loading="lazy" alt="" class="header-logo-image"></a>
+          <nav role="navigation" class="nav-list w-nav-menu"><a href="" aria-current="page"
+              class="text-link nav-link-text brave-link w-nav-link w--current" style="max-width: 100%;">Homepage</a><a
+              href="https://docsend.com/view/4crdyu7mm875xd6n" target="_blank"
+              class="text-link nav-link-text w-nav-link" style="max-width: 100%;">Pitch Deck</a><a href="#use-cases"
+              class="text-link nav-link-text w-nav-link" style="max-width: 100%;">Use Cases</a><a href="#technology"
+              class="text-link nav-link-text w-nav-link" style="max-width: 100%;">Technology</a>
+            <div data-hover="true" data-delay="0" class="nav-menu-dropdown-item w-dropdown" style="max-width: 100%;">
+              <div class="text-link nav-link-text w-dropdown-toggle" id="w-dropdown-toggle-0"
+                aria-controls="w-dropdown-list-0" aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0">
+                <div>Community</div>
+                <div class="icon w-icon-dropdown-toggle" aria-hidden="true"></div>
+              </div>
+              <nav class="nav-dropdown w-dropdown-list" id="w-dropdown-list-0" aria-labelledby="w-dropdown-toggle-0">
+                <div class="nav-dropdown-inner"><a href="https://t.me/GTProtocolNews" target="_blank"
+                    class="nav-dropdown-item w-inline-block" tabindex="0"><img
+                      src="6571cd8955f9e7f772615a44_ico-telegram.svg" loading="lazy" alt="" class="nav-dropdown-icon">
+                    <div class="nav-dropdown-text">Telegram Channel</div>
+                  </a><a href="https://t.me/GTProtocol" target="_blank" class="nav-dropdown-item w-inline-block"
+                    tabindex="0"><img src="65a557a8fe80f3ea27f0c792_ico-global.svg" loading="lazy" alt=""
+                      class="nav-dropdown-icon">
+                    <div class="nav-dropdown-text">Global Official Chat</div>
+                  </a><a href="https://t.me/GTProtocol_founder" target="_blank" class="nav-dropdown-item w-inline-block"
+                    tabindex="0"><img src="65a556916265db3c1f59076a_ico-person.svg" loading="lazy" alt=""
+                      class="nav-dropdown-icon">
+                    <div class="nav-dropdown-text">Founder's Personal Channel</div>
+                  </a>
+                  <div class="channels-list">
+                    <div class="channels-title">Local Telegram Groups:</div>
+                    <div class="channels-item"><a href="https://t.me/GTProtocolCIS" target="_blank"
+                        class="channels-link sansserif w-inline-block" tabindex="0"><img
+                          src="65a0265fdff702efb9dafa27_Chat-Sng.svg" loading="lazy" alt="" class="channels-flag">
+                        <div class="channels-name">СНГ</div>
+                      </a></div>
+                    <div class="channels-item"><a href="https://t.me/gtpturkey" target="_blank"
+                        class="channels-link w-inline-block" tabindex="0"><img
+                          src="6571cd8955f9e7f772615a55_flag-TR.svg" loading="lazy" alt="" class="channels-flag">
+                        <div class="channels-name">TR</div>
+                      </a></div>
+                    <div class="channels-item"><a href="https://t.me/GTProtocolKR" target="_blank"
+                        class="channels-link w-inline-block" tabindex="0"><img
+                          src="65a546fc27b4bca420bb0b45_flag-korean.svg" loading="lazy" alt="" class="channels-flag">
+                        <div class="channels-name">KR</div>
+                      </a></div>
+                    <div class="channels-item"><a href="https://t.me/GTProtocolCN" target="_blank"
+                        class="channels-link w-inline-block" tabindex="0"><img
+                          src="6571cd8955f9e7f772615a52_flag-CN.svg" loading="lazy" alt="" class="channels-flag">
+                        <div class="channels-name">CN</div>
+                      </a></div>
+                    <div class="channels-item"><a href="https://t.me/GTProtocolPR" target="_blank"
+                        class="channels-link w-inline-block" tabindex="0"><img
+                          src="6571cd8955f9e7f772615a56_flag-IR.svg" loading="lazy" alt="" class="channels-flag">
+                        <div class="channels-name">PR</div>
+                      </a></div>
+                  </div><a href="https://twitter.com/gt_protocol" target="_blank"
+                    class="nav-dropdown-item w-inline-block" tabindex="0"><img src="6571cd8955f9e7f772615a4e_ico-x.svg"
+                      loading="lazy" alt="" class="nav-dropdown-icon">
+                    <div class="nav-dropdown-text">Twitter</div>
+                  </a><a href="https://discord.gg/gt-protocol" target="_blank" class="nav-dropdown-item w-inline-block"
+                    tabindex="0"><img src="6571cd8955f9e7f772615a46_ico-discord.svg" loading="lazy" alt=""
+                      class="nav-dropdown-icon">
+                    <div class="nav-dropdown-text">Discord</div>
+                  </a><a href="https://medium.com/@gt-protocol" target="_blank" class="nav-dropdown-item w-inline-block"
+                    tabindex="0"><img src="6571cd8955f9e7f772615a50_ico-medium.svg" loading="lazy" alt=""
+                      class="nav-dropdown-icon">
+                    <div class="nav-dropdown-text">Medium</div>
+                  </a><a href="https://www.youtube.com/@gtprotocol" target="_blank"
+                    class="nav-dropdown-item w-inline-block" tabindex="0"><img
+                      src="6571cd8955f9e7f772615a51_ico-YouTube.svg" loading="lazy" alt="" class="nav-dropdown-icon">
+                    <div class="nav-dropdown-text">Youtube</div>
+                  </a><a href="https://www.linkedin.com/company/gtprotocol" target="_blank"
+                    class="nav-dropdown-item w-inline-block" tabindex="0"><img
+                      src="6571cd8955f9e7f772615a4d_ico-linkedIn.svg" loading="lazy" alt="" class="nav-dropdown-icon">
+                    <div class="nav-dropdown-text">Linkedin</div>
+                  </a><a href="https://www.facebook.com/gtprotocolio" target="_blank"
+                    class="nav-dropdown-item w-inline-block" tabindex="0"><img
+                      src="6571cd8955f9e7f772615a45_ico-facebook.svg" loading="lazy" alt="" class="nav-dropdown-icon">
+                    <div class="nav-dropdown-text">Facebook</div>
+                  </a><a href="https://www.instagram.com/gt.protocol/" target="_blank"
+                    class="nav-dropdown-item w-inline-block" tabindex="0"><img
+                      src="6571cd8955f9e7f772615a4f_ico-insta.svg" loading="lazy" alt="" class="nav-dropdown-icon">
+                    <div class="nav-dropdown-text">Instagram</div>
+                  </a><a href="https://www.tiktok.com/@gtprotocolio" target="_blank"
+                    class="nav-dropdown-item w-inline-block" tabindex="0"><img
+                      src="6571cd8955f9e7f772615a4c_ico-tikTok.svg" loading="lazy" alt="" class="nav-dropdown-icon">
+                    <div class="nav-dropdown-text">TikTok</div>
+                  </a>
+                </div>
+              </nav>
+            </div><a href="#partners" class="text-link nav-link-text last w-nav-link"
+              style="max-width: 100%;">Partners</a><a href="#team" class="text-link nav-link-text last w-nav-link"
+              style="max-width: 100%;">Team</a><a href="https://www.gt-protocol.io/contact-us"
+              class="text-link nav-link-text last w-nav-link" style="max-width: 100%;">Contact Us</a>
+          </nav>
+          <div class="nav-action"><a href="https://app.gt-protocol.io/" target="_blank"
+              class="btn-outline header-action w-inline-block">
+              <div class="btn-outline-left w-embed"><svg version="1.2" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 135 18" width="135" height="18">
+                  <path fill="none" stroke="currentColor" stroke-width="2" fill-rule="evenodd" class="a"
+                    d="m9 2.8c0.9-1.1 2.3-1.8 3.8-1.8h123.2c2.8 0 5 2.2 5 5v28c0 2.8-2.2 5-5 5h-130c-2.8 0-5-2.2-5-5v-19.9c0-1.2 0.4-2.3 1.2-3.2zz">
+                  </path>
+                </svg>
+                <span class="btn-outline-left-btm"><span></span></span>
+              </div>
+              <div class="btn-outline-frame"><span class="hide-in-mobile">Launch</span><span
+                  class="text-span">App</span></div>
+            </a></div>
+          <div class="menu-button w-nav-button" style="-webkit-user-select: text;" aria-label="menu" role="button"
+            tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false">
+            <div class="menu-button-inner">
+              <div class="html-embed w-embed"><svg class="open-menu-icon" width="14" height="8" viewBox="0 0 14 8"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0H14V2H0V0Z" fill="#D9D9D9"></path>
+                  <path d="M0 6H14V8H0V6Z" fill="#D9D9D9"></path>
+                </svg>
+                <svg class="close-menu-icon" width="13" height="13" viewBox="0 0 13 13" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.39892 0.312707L12.5903 11.5903L11.1913 13L0 1.72241L1.39892 0.312707Z" fill="#D9D9D9">
+                  </path>
+                  <path d="M0.409734 11.2776L11.6011 0L13 1.4097L1.80865 12.6873L0.409734 11.2776Z" fill="#D9D9D9">
+                  </path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
+      </div>
+    </header>
+  </div>
+  <aside class="aside-media-nav">
+    <div class="w-embed">
+      <style>
+        .aside-link-block svg {
+          display: block;
+          width: 1.25rem;
+          height: 1.25rem;
+        }
+
+        .aside-media-icon path {
+          transition: all 0.25s ease;
+        }
+
+        .aside-drop-menu-wrapper {
+          transition: opacity .3s, transform .3s, height 0s .3s;
+        }
+
+        .aside-drop-menu-wrapper.is-open {
+          transition: opacity .3s, transform .3s, height 0s 0s;
+        }
+      </style>
+    </div>
+    <div class="aside-media-inner">
+      <div class="aside-drop-menu-wrapper">
+        <div class="aside-drop-menu"><a href="https://t.me/GTProtocolNews" target="_blank"
+            class="aside-drop-title">Telegram Channel</a><a href="https://t.me/GTProtocol" target="_blank"
+            class="aside-drop-title">Global Official Chat</a><a href="https://t.me/GTProtocol_founder" target="_blank"
+            class="aside-drop-title">Founder's Personal Channel</a>
+          <div class="channels-list">
+            <div class="channels-title">Local Telegram Groups:</div>
+            <div class="channels-item size-sm"><a href="https://t.me/GTProtocolCIS" target="_blank"
+                class="channels-link sansserif w-inline-block"><img src="65a0265fdff702efb9dafa27_Chat-Sng.svg"
+                  loading="lazy" alt="" class="channels-flag">
+                <div class="channels-name">СНГ</div>
+              </a></div>
+            <div class="channels-item size-sm"><a href="https://t.me/gtpturkey" target="_blank"
+                class="channels-link w-inline-block"><img src="6571cd8955f9e7f772615a55_flag-TR.svg" loading="lazy"
+                  alt="" class="channels-flag">
+                <div class="channels-name">TR</div>
+              </a></div>
+            <div class="channels-item size-sm"><a href="https://t.me/GTProtocolKR" target="_blank"
+                class="channels-link w-inline-block"><img src="65a546fc27b4bca420bb0b45_flag-korean.svg" loading="lazy"
+                  alt="" class="channels-flag">
+                <div class="channels-name">KR</div>
+              </a></div>
+            <div class="channels-item size-sm"><a href="https://t.me/GTProtocolCN" target="_blank"
+                class="channels-link w-inline-block"><img src="6571cd8955f9e7f772615a52_flag-CN.svg" loading="lazy"
+                  alt="" class="channels-flag">
+                <div class="channels-name">CN</div>
+              </a></div>
+            <div class="channels-item size-sm"><a href="https://t.me/GTProtocolPR" target="_blank"
+                class="channels-link w-inline-block"><img src="6571cd8955f9e7f772615a56_flag-IR.svg" loading="lazy"
+                  alt="" class="channels-flag">
+                <div class="channels-name">PR</div>
+              </a></div>
+          </div>
+        </div>
+      </div>
+      <div class="aside-media">
+        <ul role="list" class="aside-nav-list w-list-unstyled">
+          <li id="telegram-nav-link" class="aside-nav-link"><a href="#" class="aside-link-block w-inline-block">
+              <div class="html-embed w-embed"><svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.0666 4.98242L3 9.64897L6.73328 11.5157L12.3333 7.78242L8.6 12.4491L14.2 16.1824L16.0666 4.98242Z"
+                    stroke="currentColor" stroke-width="0.933275" stroke-linejoin="round"></path>
+                </svg></div>
+            </a></li>
+          <li class="aside-nav-link"><a rel="nofollow" href="https://twitter.com/gt_protocol" target="_blank"
+              class="aside-link-block w-inline-block">
+              <div class="html-embed w-embed"><svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M13.6213 5.98242H15.3924L11.5231 10.4048L16.075 16.4226H12.5109L9.71937 12.7728L6.52522 16.4226H4.75308L8.89165 11.6924L4.525 5.98242H8.17958L10.7029 9.31845L13.6213 5.98242ZM12.9997 15.3625H13.9811L7.64633 6.98682H6.59322L12.9997 15.3625Z"
+                    fill="currentColor"></path>
+                </svg></div>
+            </a></li>
+          <li class="aside-nav-link"><a rel="nofollow" href="https://discord.gg/gt-protocol" target="_blank"
+              class="aside-link-block w-inline-block">
+              <div class="html-embed w-embed"><svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.78648 4.98909C7.73861 4.98156 7.68994 4.9804 7.64176 4.98565C6.67923 5.09049 5.21449 5.60976 4.34993 6.07867C4.29262 6.10976 4.2413 6.1508 4.19837 6.19989C3.83945 6.61026 3.51385 7.28044 3.25823 7.91377C2.9955 8.56473 2.77792 9.25077 2.65393 9.74647C2.25035 11.36 2.02868 13.2979 2.00007 15.1346C1.99863 15.2266 2.02031 15.3175 2.06311 15.3988C2.40763 16.054 3.14734 16.6616 3.88874 17.1058C4.63847 17.555 5.51267 17.9102 6.21812 17.9784C6.38919 17.9949 6.55811 17.9303 6.67464 17.8041C6.85129 17.6126 7.15119 17.1658 7.37792 16.8187C7.48083 16.6613 7.57715 16.5109 7.65368 16.3905C8.41091 16.5284 9.36086 16.6079 10.5618 16.6079C11.7615 16.6079 12.7106 16.5285 13.4675 16.391C13.5439 16.5114 13.6401 16.6615 13.7429 16.8187C13.9697 17.1658 14.2696 17.6126 14.4461 17.8041C14.5627 17.9303 14.7316 17.9949 14.9027 17.9784C15.6081 17.9102 16.4823 17.555 17.2321 17.1058C17.9735 16.6616 18.7132 16.054 19.0578 15.3988C19.1005 15.3175 19.1222 15.2266 19.1208 15.1346C19.0922 13.2979 18.8704 11.36 18.4669 9.74647C18.343 9.25077 18.1253 8.56473 17.8626 7.91377C17.607 7.28044 17.2813 6.61026 16.9225 6.19989C16.8796 6.1508 16.8282 6.10976 16.7709 6.07867C15.9063 5.60976 14.4416 5.09049 13.479 4.98565C13.4309 4.9804 13.3822 4.98156 13.3343 4.98909C13.0983 5.02617 12.895 5.14784 12.7451 5.26108C12.5868 5.38064 12.4398 5.52784 12.3129 5.67675C12.129 5.89257 11.9513 6.15511 11.8368 6.40383C11.4456 6.37266 11.0211 6.35549 10.5618 6.35549C10.1015 6.35549 9.67609 6.37274 9.28412 6.40405C9.1696 6.15526 8.99183 5.89263 8.80788 5.67675C8.68099 5.52784 8.53397 5.38064 8.37572 5.26108C8.22581 5.14784 8.02252 5.02617 7.78648 4.98909ZM14.5873 16.1023C14.6118 16.1402 14.637 16.1789 14.6625 16.2179C14.8148 16.4511 14.9656 16.6748 15.0825 16.8377C15.5364 16.7355 16.1136 16.4955 16.6676 16.1635C17.2893 15.791 17.7817 15.3627 18.0196 14.9989C17.9824 13.2753 17.7697 11.4859 17.4012 10.013C17.2899 9.56803 17.0883 8.93025 16.844 8.32491C16.614 7.75518 16.3691 7.27273 16.1548 6.99534C15.4106 6.60972 14.2381 6.20195 13.4743 6.09216C13.4576 6.10191 13.4353 6.11636 13.4072 6.13757C13.3293 6.19644 13.2395 6.28301 13.1491 6.38918C13.1015 6.44493 13.0581 6.50092 13.0193 6.55514C13.3686 6.61901 13.6802 6.69544 13.9558 6.78026C14.7382 7.02097 15.3021 7.35142 15.5781 7.71941C15.7602 7.96208 15.711 8.30634 15.4683 8.48834C15.2256 8.67034 14.8814 8.62116 14.6994 8.37849C14.6321 8.2888 14.3379 8.04712 13.6327 7.83014C12.9525 7.62084 11.9504 7.45395 10.5618 7.45395C9.17321 7.45395 8.17113 7.62084 7.49087 7.83014C6.7857 8.04712 6.49153 8.2888 6.42426 8.37849C6.24225 8.62116 5.898 8.67034 5.65533 8.48834C5.41266 8.30634 5.36348 7.96208 5.54548 7.71941C5.82149 7.35142 6.38548 7.02097 7.16782 6.78026C7.44283 6.69563 7.75353 6.61937 8.10189 6.55559C8.06293 6.50124 8.01941 6.44509 7.97178 6.38918C7.8813 6.28301 7.79154 6.19644 7.71359 6.13757C7.68552 6.11636 7.66317 6.10191 7.64649 6.09216C6.88268 6.20195 5.71024 6.60972 4.96598 6.99534C4.75168 7.27273 4.50681 7.75518 4.27686 8.32491C4.03253 8.93025 3.83087 9.56803 3.71957 10.013C3.35117 11.4859 3.13843 13.2753 3.10124 14.9989C3.33908 15.3627 3.8315 15.791 4.45329 16.1635C5.0072 16.4955 5.58442 16.7355 6.03842 16.8377C6.15519 16.6748 6.306 16.4511 6.45835 16.2179C6.48405 16.1785 6.50937 16.1396 6.53406 16.1015C5.63612 15.783 5.15371 15.3444 4.84137 14.8759C4.67311 14.6235 4.74132 14.2825 4.9937 14.1142C5.2461 13.946 5.58709 14.0142 5.75535 14.2666C6.05441 14.7152 6.83567 15.5095 10.5618 15.5095C14.288 15.5095 15.0692 14.7153 15.3683 14.2666C15.5366 14.0142 15.8776 13.946 16.13 14.1142C16.3824 14.2825 16.4506 14.6235 16.2823 14.8759C15.9697 15.3448 15.4867 15.7838 14.5873 16.1023ZM6.64909 10.9235C6.92786 10.6233 7.30619 10.4537 7.7013 10.4518C8.09642 10.4537 8.47476 10.6233 8.75353 10.9235C9.0323 11.2237 9.18881 11.6301 9.18881 12.0538C9.18881 12.4774 9.0323 12.8838 8.75353 13.184C8.47476 13.4842 8.09642 13.6538 7.7013 13.6557C7.30619 13.6538 6.92786 13.4842 6.64909 13.184C6.37031 12.8838 6.2138 12.4774 6.2138 12.0538C6.2138 11.6301 6.37031 11.2237 6.64909 10.9235ZM13.4211 10.4518C13.026 10.4537 12.6476 10.6233 12.3689 10.9235C12.0901 11.2237 11.9336 11.6301 11.9336 12.0538C11.9336 12.4774 12.0901 12.8838 12.3689 13.184C12.6476 13.4842 13.026 13.6538 13.4211 13.6557C13.8162 13.6538 14.1945 13.4842 14.4733 13.184C14.7521 12.8838 14.9086 12.4774 14.9086 12.0538C14.9086 11.6301 14.7521 11.2237 14.4733 10.9235C14.1945 10.6233 13.8162 10.4537 13.4211 10.4518Z"
+                    fill="currentColor"></path>
+                </svg></div>
+            </a></li>
+          <li class="aside-nav-link"><a rel="nofollow" href="https://medium.com/@gt-protocol" target="_blank"
+              class="aside-link-block w-inline-block">
+              <div class="html-embed w-embed"><svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M11.0248 11.5256C11.0248 14.0349 9.00445 16.069 6.51218 16.069C4.01991 16.069 2 14.0355 2 11.5256C2 9.01564 4.02013 6.98242 6.51218 6.98242C9.00423 6.98242 11.0248 9.01629 11.0248 11.5256ZM15.9751 11.5256C15.9751 13.8878 14.9649 15.8023 13.7189 15.8023C12.4728 15.8023 11.4627 13.8869 11.4627 11.5256C11.4627 9.16422 12.4728 7.24882 13.7189 7.24882C14.9649 7.24882 15.9751 9.16422 15.9751 11.5256ZM17.9998 11.5256C17.9998 13.6419 17.6444 15.3575 17.2063 15.3575C16.7682 15.3575 16.4127 13.6413 16.4127 11.5256C16.4127 9.40989 16.7682 7.69369 17.2065 7.69369C17.6448 7.69369 17.9998 9.40945 17.9998 11.5256Z"
+                    stroke="currentColor" stroke-width="0.919996" stroke-linejoin="round"></path>
+                </svg></div>
+            </a></li>
+          <li class="aside-nav-link"><a rel="nofollow" href="https://www.youtube.com/@gtprotocol" target="_blank"
+              class="aside-link-block w-inline-block">
+              <div class="html-embed w-embed"><svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M9.20831 5.98383L10.2642 5.98242L11.4117 5.99722L12.1449 6.01343L12.9266 6.03786L13.4535 6.05947L13.9699 6.08578L14.4629 6.11749C15.0993 6.16354 15.6394 6.22508 15.9466 6.3073C16.6208 6.4863 17.151 7.01531 17.3319 7.69207C17.3995 7.94413 17.4531 8.25256 17.4956 8.58331L17.5416 8.98876C17.5553 9.12595 17.5675 9.26478 17.578 9.40267L17.6173 10.0106L17.6347 10.3883L17.656 11.1412L17.6586 11.585L17.6466 12.1891L17.6269 12.716L17.5931 13.3122C17.579 13.5175 17.5621 13.7271 17.5416 13.9333L17.4956 14.3395C17.4531 14.6707 17.3995 14.9794 17.3319 15.2314C17.151 15.9082 16.6208 16.4374 15.9466 16.6162C15.6394 16.6984 15.0993 16.76 14.4629 16.806L13.9699 16.8377L13.4535 16.864L12.6633 16.8948L12.1449 16.9101L10.7702 16.9361L9.63537 16.9425L8.59591 16.9321L7.65181 16.9136L7.03002 16.896L6.18294 16.8631L5.52779 16.8281L5.11411 16.7999L4.72816 16.7675C4.66662 16.7616 4.60648 16.7557 4.54799 16.7496L4.21841 16.7102C4.01358 16.6822 3.84068 16.651 3.70961 16.616C3.03613 16.437 2.50524 15.9079 2.3253 15.2312C2.23087 14.8783 2.16392 14.4144 2.11623 13.9331L2.07982 13.5185L2.05187 13.1083L2.0312 12.7158L2.01146 12.1889L1.99948 11.5847V11.3313L2.01146 10.7287L2.0312 10.2032L2.05187 9.81164L2.07982 9.40243L2.11623 8.98853C2.16392 8.50814 2.2311 8.0449 2.3253 7.69207C2.50547 7.01531 3.03636 6.48606 3.70961 6.3073C3.84045 6.2723 4.01358 6.24105 4.21841 6.2131L4.54799 6.17364C4.60648 6.16753 4.66662 6.16142 4.72816 6.15578L5.11411 6.12337L5.52779 6.09518L6.18294 6.06018L6.63114 6.04138L7.65181 6.00967L8.76339 5.98876L9.20831 5.98383ZM10.0232 7.5469H9.64265L8.83481 7.55395L7.97129 7.56875L7.08522 7.59247L6.46647 7.61526L5.64195 7.65731L5.11341 7.69419L4.81014 7.72073L4.55034 7.74845C4.51087 7.75315 4.47329 7.75785 4.43758 7.76255L4.24895 7.79144C4.19445 7.80107 4.14865 7.81094 4.112 7.8208C3.98022 7.8558 3.87428 7.96175 3.83834 8.09658C3.75682 8.40102 3.69481 8.85815 3.65017 9.38411L3.61635 9.84969L3.59121 10.3374C3.58769 10.4198 3.58464 10.5027 3.58182 10.5857L3.56913 11.0841L3.56561 11.3313V11.5699L3.56866 11.8051L3.58017 12.2782L3.59896 12.747L3.62504 13.2025L3.65887 13.6347C3.70279 14.1219 3.76223 14.5427 3.8388 14.8288C3.87428 14.9617 3.98022 15.0679 4.11459 15.1034L4.1759 15.118L4.33845 15.1468L4.55104 15.1753L4.81038 15.2028L5.11294 15.2291L5.4552 15.254L6.03565 15.288L6.68611 15.3169L7.08052 15.3308L7.96964 15.3545L8.83363 15.3693L9.83269 15.3768L10.462 15.3733L11.4052 15.3604C11.7274 15.3543 12.0551 15.3465 12.3814 15.3369L13.0892 15.3122L13.7098 15.2833L14.2628 15.25L14.7378 15.2129L15.1244 15.1729L15.3281 15.1452C15.3582 15.1405 15.3864 15.1358 15.4124 15.1311L15.5447 15.1027C15.6767 15.0677 15.7826 14.9617 15.8188 14.8262C15.9062 14.5001 15.9715 13.9979 16.0166 13.4222L16.0464 12.9779C16.0509 12.9021 16.0549 12.8255 16.0587 12.7484L16.0775 12.2807L16.089 11.8093L16.0927 11.4607L16.089 11.1126L16.0775 10.6411L16.0587 10.1736L16.0324 9.71956C15.9875 9.05336 15.917 8.46445 15.8186 8.09705C15.7826 7.96245 15.6765 7.85651 15.5414 7.82057C15.5062 7.81117 15.4622 7.80178 15.4101 7.79238L15.2301 7.76443L15.0049 7.73718L14.7371 7.71087L14.4298 7.68573L13.902 7.65097L13.5097 7.63006L12.8686 7.60281C12.5454 7.59106 12.2172 7.5812 11.8916 7.57345L10.9285 7.55536L10.0232 7.5469Z"
+                    fill="currentColor"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8 13.6115V8.98242L12.0937 11.293L8 13.6115Z"
+                    fill="currentColor"></path>
+                </svg></div>
+            </a></li>
+          <li class="aside-nav-link"><a rel="nofollow" href="https://www.linkedin.com/company/gtprotocol"
+              target="_blank" class="aside-link-block w-inline-block">
+              <div class="html-embed w-embed"><svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_554_4645)">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M5.219 4.98242H14.9705C15.6437 4.98242 16.1895 5.5282 16.1895 6.20142V15.9529C16.1895 16.6261 15.6437 17.1719 14.9705 17.1719H5.219C4.54578 17.1719 4 16.6261 4 15.9529V6.20142C4 5.5282 4.54578 4.98242 5.219 4.98242ZM5.219 6.20142V15.9529H14.9705V6.20142H5.219ZM9.76077 9.52437C10.0551 9.34519 10.3886 9.24883 10.7042 9.24883H11.3136C12.1633 9.24883 13.142 9.94801 13.142 11.0772V13.5151H11.923V11.0772C11.923 10.7264 11.561 10.4678 11.3136 10.4678H10.7042C10.4568 10.4678 10.0948 10.7264 10.0948 11.0772V13.5151H8.87582V9.24883H9.48523L9.76077 9.52437ZM7.65682 8.63942C7.32021 8.63942 7.04741 8.36662 7.04741 8.03001C7.04741 7.6934 7.32021 7.42061 7.65682 7.42061C7.99343 7.42061 8.26623 7.6934 8.26623 8.03001C8.26623 8.36662 7.99343 8.63942 7.65682 8.63942ZM8.26623 13.5152H7.04723V9.24901H8.26623V13.5152Z"
+                      fill="currentColor"></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_554_4645">
+                      <rect width="12.1895" height="12.1895" fill="currentColor" transform="translate(4 4.98242)">
+                      </rect>
+                    </clipPath>
+                  </defs>
+                </svg></div>
+            </a></li>
+          <li class="aside-nav-link"><a rel="nofollow" href="https://www.facebook.com/gtprotocolio" target="_blank"
+              class="aside-link-block w-inline-block">
+              <div class="html-embed w-embed"><svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10.0512 3.98242C6.07458 3.98242 2.8512 7.20581 2.8512 11.1824C2.8512 15.159 6.07458 18.3824 10.0512 18.3824C14.0278 18.3824 17.2512 15.159 17.2512 11.1824C17.2457 7.20581 14.0278 3.98242 10.0512 3.98242ZM10.605 17.247V12.844H12.2666C12.5712 12.844 12.8204 12.5947 12.8204 12.2901C12.8204 11.9855 12.5712 11.7363 12.2666 11.7363H10.605V10.0747C10.605 9.4655 11.1035 8.96704 11.7127 8.96704H12.8204C13.125 8.96704 13.3743 8.71781 13.3743 8.41319C13.3743 8.10858 13.125 7.85934 12.8204 7.85934H11.7127C10.4887 7.85934 9.49735 8.85073 9.49735 10.0747V11.7363H7.83581C7.5312 11.7363 7.28197 11.9855 7.28197 12.2901C7.28197 12.5947 7.5312 12.844 7.83581 12.844H9.49735V17.247C6.14658 16.9424 3.67643 13.9793 3.98658 10.6286C4.2912 7.27781 7.25427 4.80765 10.605 5.11227C13.9558 5.41688 16.426 8.37996 16.1158 11.7307C15.85 14.655 13.5293 16.9757 10.605 17.2415V17.247Z"
+                    fill="currentColor"></path>
+                </svg></div>
+            </a></li>
+          <li class="aside-nav-link"><a rel="nofollow" href="https://www.instagram.com/gt.protocol/" target="_blank"
+              class="aside-link-block w-inline-block">
+              <div class="html-embed w-embed"><svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_554_4650)">
+                    <path
+                      d="M9.99902 5.24297C11.8693 5.24297 12.0908 5.25117 12.8264 5.28398C13.51 5.31406 13.8791 5.42891 14.1252 5.52461C14.4506 5.65039 14.6857 5.80352 14.9291 6.04688C15.1752 6.29297 15.3256 6.52539 15.4514 6.85078C15.5471 7.09688 15.6619 7.46875 15.692 8.14961C15.7248 8.88789 15.733 9.10938 15.733 10.977C15.733 12.8473 15.7248 13.0688 15.692 13.8043C15.6619 14.4879 15.5471 14.857 15.4514 15.1031C15.3256 15.4285 15.1725 15.6637 14.9291 15.907C14.683 16.1531 14.4506 16.3035 14.1252 16.4293C13.8791 16.525 13.5072 16.6398 12.8264 16.6699C12.0881 16.7027 11.8666 16.7109 9.99902 16.7109C8.12871 16.7109 7.90723 16.7027 7.17168 16.6699C6.48809 16.6398 6.11895 16.525 5.87285 16.4293C5.54746 16.3035 5.3123 16.1504 5.06895 15.907C4.82285 15.6609 4.67246 15.4285 4.54668 15.1031C4.45098 14.857 4.33613 14.4852 4.30605 13.8043C4.27324 13.066 4.26504 12.8445 4.26504 10.977C4.26504 9.10664 4.27324 8.88516 4.30605 8.14961C4.33613 7.46602 4.45098 7.09688 4.54668 6.85078C4.67246 6.52539 4.82559 6.29023 5.06895 6.04688C5.31504 5.80078 5.54746 5.65039 5.87285 5.52461C6.11895 5.42891 6.49082 5.31406 7.17168 5.28398C7.90723 5.25117 8.12871 5.24297 9.99902 5.24297ZM9.99902 3.98242C8.09863 3.98242 7.86074 3.99062 7.11426 4.02344C6.37051 4.05625 5.85918 4.17656 5.41621 4.34883C4.9541 4.5293 4.56309 4.76719 4.1748 5.1582C3.78379 5.54648 3.5459 5.9375 3.36543 6.39688C3.19316 6.84258 3.07285 7.35117 3.04004 8.09492C3.00723 8.84414 2.99902 9.08203 2.99902 10.9824C2.99902 12.8828 3.00723 13.1207 3.04004 13.8672C3.07285 14.6109 3.19316 15.1223 3.36543 15.5652C3.5459 16.0273 3.78379 16.4184 4.1748 16.8066C4.56309 17.1949 4.9541 17.4355 5.41348 17.6133C5.85918 17.7855 6.36777 17.9059 7.11152 17.9387C7.85801 17.9715 8.0959 17.9797 9.99629 17.9797C11.8967 17.9797 12.1346 17.9715 12.8811 17.9387C13.6248 17.9059 14.1361 17.7855 14.5791 17.6133C15.0385 17.4355 15.4295 17.1949 15.8178 16.8066C16.2061 16.4184 16.4467 16.0273 16.6244 15.568C16.7967 15.1223 16.917 14.6137 16.9498 13.8699C16.9826 13.1234 16.9908 12.8855 16.9908 10.9852C16.9908 9.08477 16.9826 8.84688 16.9498 8.10039C16.917 7.35664 16.7967 6.84531 16.6244 6.40234C16.4521 5.9375 16.2143 5.54648 15.8232 5.1582C15.435 4.76992 15.0439 4.5293 14.5846 4.35156C14.1389 4.1793 13.6303 4.05898 12.8865 4.02617C12.1373 3.99063 11.8994 3.98242 9.99902 3.98242Z"
+                      fill="currentColor"></path>
+                    <path
+                      d="M9.99902 7.38672C8.01387 7.38672 6.40332 8.99727 6.40332 10.9824C6.40332 12.9676 8.01387 14.5781 9.99902 14.5781C11.9842 14.5781 13.5947 12.9676 13.5947 10.9824C13.5947 8.99727 11.9842 7.38672 9.99902 7.38672ZM9.99902 13.3148C8.71113 13.3148 7.6666 12.2703 7.6666 10.9824C7.6666 9.69453 8.71113 8.65 9.99902 8.65C11.2869 8.65 12.3314 9.69453 12.3314 10.9824C12.3314 12.2703 11.2869 13.3148 9.99902 13.3148Z"
+                      fill="currentColor"></path>
+                    <path
+                      d="M14.5764 7.24375C14.5764 7.7086 14.199 8.08321 13.7369 8.08321C13.2721 8.08321 12.8975 7.70586 12.8975 7.24375C12.8975 6.77891 13.2748 6.4043 13.7369 6.4043C14.199 6.4043 14.5764 6.78164 14.5764 7.24375Z"
+                      fill="currentColor"></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_554_4650">
+                      <rect width="14" height="14" fill="currentColor" transform="translate(2.99902 3.98242)"></rect>
+                    </clipPath>
+                  </defs>
+                </svg></div>
+            </a></li>
+          <li class="aside-nav-link"><a rel="nofollow" href="https://www.tiktok.com/@gtprotocolio" target="_blank"
+              class="aside-link-block w-inline-block">
+              <div class="html-embed w-embed"><svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12.3744 3.98242C12.7656 3.98242 13.0827 4.29947 13.0827 4.69068C13.0827 6.0594 14.0561 7.20456 15.3488 7.46721C15.7321 7.5452 15.9797 7.91898 15.9019 8.30233C15.8239 8.68568 15.4499 8.93325 15.0666 8.85547C14.3141 8.70247 13.6337 8.35078 13.0827 7.85757V13.8989C13.0827 15.855 11.497 17.4407 9.54094 17.4407C7.58488 17.4407 5.99921 15.855 5.99921 13.8989C5.99921 11.9429 7.58488 10.3572 9.54094 10.3572C9.93216 10.3572 10.2492 10.6743 10.2492 11.0655C10.2492 11.4567 9.93216 11.7737 9.54094 11.7737C8.36731 11.7737 7.41594 12.7251 7.41594 13.8987C7.41594 15.0724 8.36731 16.0237 9.54094 16.0237C10.7146 16.0237 11.6659 15.0724 11.6659 13.8987V4.69068C11.6659 4.29947 11.983 3.98242 12.3742 3.98242H12.3744Z"
+                    fill="currentColor"></path>
+                </svg></div>
+            </a></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+  <div class="sticky-container">
+    <div class="sections-container">
+      <main class="hero">
+        <div
+          data-poster-url="https://assets-global.website-files.com/655b3abf2299b0e80b845377/655e31615c5380a79c78fa87_GT_hero_2560px-poster-00001.jpg"
+          data-video-urls="https://assets-global.website-files.com/6571cd8955f9e7f772615980/6571cd8955f9e7f772615a57_GT_hero_2560px-transcode.mp4,https://assets-global.website-files.com/6571cd8955f9e7f772615980/6571cd8955f9e7f772615a57_GT_hero_2560px-transcode.webm"
+          data-autoplay="true" data-loop="true" data-wf-ignore="true"
+          class="hero-video w-background-video w-background-video-atom"><video
+            id="afa7c470-0dcb-4797-fbfc-8fecdea27b97-video" autoplay="" loop=""
+            style="background-image:url(&quot;655e31615c5380a79c78fa87_GT_hero_2560px-poster-00001.jpg&quot;)" muted=""
+            playsinline="" data-wf-ignore="true" data-object-fit="cover">
+            <source src="6571cd8955f9e7f772615a57_GT_hero_2560px-transcode.mp4" data-wf-ignore="true">
+            <source src="6571cd8955f9e7f772615a57_GT_hero_2560px-transcode.webm" data-wf-ignore="true">
+          </video></div>
+        <div
+          data-poster-url="https://assets-global.website-files.com/655b3abf2299b0e80b845377/6560a51cb94ac6a163a44c48_GT_Hero_Mobile-poster-00001.jpg"
+          data-video-urls="https://assets-global.website-files.com/6571cd8955f9e7f772615980/6571cd8955f9e7f772615a6b_GT_Hero_Mobile-transcode.mp4,https://assets-global.website-files.com/6571cd8955f9e7f772615980/6571cd8955f9e7f772615a6b_GT_Hero_Mobile-transcode.webm"
+          data-autoplay="true" data-loop="true" data-wf-ignore="true"
+          class="hero-video hero-video-mobile w-background-video w-background-video-atom"><video
+            id="afa7c470-0dcb-4797-fbfc-8fecdea27b98-video" autoplay="" loop=""
+            style="background-image:url(&quot;6560a51cb94ac6a163a44c48_GT_Hero_Mobile-poster-00001.jpg&quot;)" muted=""
+            playsinline="" data-wf-ignore="true" data-object-fit="cover">
+            <source src="6571cd8955f9e7f772615a6b_GT_Hero_Mobile-transcode.mp4" data-wf-ignore="true">
+            <source src="6571cd8955f9e7f772615a6b_GT_Hero_Mobile-transcode.webm" data-wf-ignore="true">
+          </video></div>
+        <div class="hero-container tablet-column">
+          <div class="hero-content tablet-column">
+            <h1 class="hero-heading size-sm"><span class="hero-heading-row">$GTAI</span> <span
+                class="hero-heading-row icon-row">Airdrop is</span> <span class="hero-heading-row">LIVE</span></h1>
+            <div class="hero-banner-wrap">
+              <div class="event-banner">
+                <div class="timer-settings w-embed w-script">
+                  <style>
+                    @media screen and (min-width: 992px) {
+                      .event-banner-main-inner {
+                        clip-path: polygon(0.25rem 0%, calc(100% - 1.375rem) 0%, 100% 1.625rem, 100% calc(100% - 0.25rem), calc(100% - 0.25rem) 100%, 0.25rem 100%, 0% calc(100% - 0.25rem), 0% 0.25rem);
+                      }
+                    }
+                  </style>
+                </div>
+                <div class="event-banner-main">
+                  <div class="event-banner-main-inner">
+                    <div id="connect_button" style="cursor: pointer;" class="text-block">Claim Airdrop</div>
+                    <div class="w-layout-hflex button-area"><a target="_blank" class="link-block-3 w-inline-block"><img
+                          src="65afd56075bfd45f311a5da6_bybit-seeklogo%202.svg" loading="lazy" alt=""
+                          class="image-5"></a><a target="_blank" class="link-block-3 w-inline-block"><img
+                          src="65afd8d538685817cf5df4ea_KUCOIN%201.svg" loading="lazy" alt=""></a><a target="_blank"
+                        class="link-block-3 w-inline-block"><img src="65afd923b52e5bc7397df460_Group%201991422660.svg"
+                          loading="lazy" alt=""></a><a target="_blank" class="link-block-3 w-inline-block"><img
+                          src="65afd9569f422d44e4e6c517_Group%201%20(1).svg" loading="lazy" alt=""></a><a
+                        target="_blank" class="link-block-3 w-inline-block"><img
+                          src="65ab7a9b97271787d49d2c36_bitget.svg" loading="lazy" alt=""></a><a target="_blank"
+                        class="link-block-3 w-inline-block"><img src="65b0176118c8c1d839676455_mx-logo.svg"
+                          loading="lazy" alt=""></a><a target="_blank"
+                        class="link-block-3 fide-banner-logo w-inline-block"><img
+                          src="65b017a79eb057976d873b70_htx-logo.svg" loading="lazy" alt=""></a></div><a target="_blank"
+                      class="link-block-4 w-inline-block">
+                      <div class="text-block-2">How to buy $GTAI Token?</div>
+                    </a>
+                    <div class="event-banner-heading">
+                      <h2 class="event-banner-title">$GTAI Token Launch Event</h2>
+                      <div class="event-banner-date">
+                        <div class="event-banner-date-nb">JAN, 25</div>
+                        <div class="event-banner-date-divider"></div>
+                        <div class="event-banner-timezone">10AM UTC</div>
+                      </div>
+                    </div>
+                    <div class="event-banner-timer-wrap">
+                      <div class="event-timer">
+                        <div class="event-timer-item">
+                          <div id="daysLeft" class="event-timer-value">00</div>
+                          <div class="event-timer-value-type">days</div>
+                        </div>
+                        <div class="event-timer-colon">:</div>
+                        <div class="event-timer-item">
+                          <div id="hoursLeft" class="event-timer-value">01</div>
+                          <div class="event-timer-value-type">hours</div>
+                        </div>
+                        <div class="event-timer-colon">:</div>
+                        <div class="event-timer-item">
+                          <div id="minutesLeft" class="event-timer-value">18</div>
+                          <div class="event-timer-value-type">min</div>
+                        </div>
+                        <div class="event-timer-colon">:</div>
+                        <div class="event-timer-item">
+                          <div id="secondsLeft" class="event-timer-value">24</div>
+                          <div class="event-timer-value-type">sec</div>
+                        </div>
+                      </div>
+                      <div class="event-timer-admin">
+                        <div id="initYearEvent" class="timer-year">2024</div>
+                        <div id="initMonthEvent" class="timer-month">1</div>
+                        <div id="initDateEvent" class="timer-date">25</div>
+                        <div id="initTimeEvent" class="timer-time">10</div>
+                        <div id="initTimezoneEvent" class="timer-timezone">Etc/UTC</div>
+                      </div>
+                    </div>
+                    <div class="event-banner-main-actions"><a id="launch-app-cta-utm"
+                        href="https://t.me/gtprotocol_gtai_bot?" target="_blank"
+                        class="btn-primary header-action w-inline-block">
+                        <div class="btn-primary-left w-embed"><svg version="1.2" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 128 18" width="128" height="18">
+                            <path fill="currentColor" stroke="currentColor" class="a"
+                              d="m8.7 2.1c1.1-1.3 2.8-2.1 4.5-2.1h113.3c3.3 0 6 2.7 6 6v28c0 3.3-2.7 6-6 6h-120c-3.4 0-6-2.7-6-6v-19.9c0-1.4 0.4-2.8 1.4-3.9z">
+                            </path>
+                          </svg>
+                          <span class="btn-primary-left-btm"><span></span></span>
+                        </div>
+                        <div class="btn-primary-frame"><span class="hide-in-mobile">Join</span> Announcement Bot</div>
+                      </a><a id="launch-app-cta-utm"
+                        href="https://calendar.google.com/calendar/u/0/r/eventedit?text=$GTAI+TOKEN+LAUNCH+EVENT&amp;dates=20240125T100000/20240425T110000&amp;ctz=Etc/Greenwich"
+                        target="_blank" class="btn-primary header-action w-inline-block">
+                        <div class="btn-primary-left w-embed"><svg version="1.2" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 128 18" width="128" height="18">
+                            <path fill="currentColor" stroke="currentColor" class="a"
+                              d="m8.7 2.1c1.1-1.3 2.8-2.1 4.5-2.1h113.3c3.3 0 6 2.7 6 6v28c0 3.3-2.7 6-6 6h-120c-3.4 0-6-2.7-6-6v-19.9c0-1.4 0.4-2.8 1.4-3.9z">
+                            </path>
+                          </svg>
+                          <span class="btn-primary-left-btm"><span></span></span>
+                        </div>
+                        <div class="btn-primary-frame">Add to calendar</div>
+                      </a></div>
+                  </div>
+                </div>
+                <div class="event-banner-box">
+                  <h3 class="event-banner-box-title">Token Launch on</h3>
+                  <div class="event-banner-buy-wrap">
+                    <div class="event-banner-buy"><a href="https://www.bybit.com/fiat/trade/express/home"
+                        target="_blank" class="w-inline-block"><img src="65aa5017329f9916165108bb_bybit-logo.svg"
+                          loading="lazy" alt="" class="event-banner-buy-logo"></a><a id="launch-app-cta-utm"
+                        href="https://t.me/GTAI_Token_Launch_Bot" target="_blank"
+                        class="btn-primary header-action w-inline-block">
+                        <div class="btn-primary-left w-embed"><svg version="1.2" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 128 18" width="128" height="18">
+                            <path fill="currentColor" stroke="currentColor" class="a"
+                              d="m8.7 2.1c1.1-1.3 2.8-2.1 4.5-2.1h113.3c3.3 0 6 2.7 6 6v28c0 3.3-2.7 6-6 6h-120c-3.4 0-6-2.7-6-6v-19.9c0-1.4 0.4-2.8 1.4-3.9z">
+                            </path>
+                          </svg>
+                          <span class="btn-primary-left-btm"><span></span></span>
+                        </div>
+                        <div class="btn-primary-frame"><img src="65abbbd897271787d4c243f5_arrow-right.svg"
+                            loading="lazy" alt="" class="btn-icon">
+                          <div>Buy $GTAI</div>
+                        </div>
+                      </a></div>
+                    <div class="event-banner-buy"><a href="https://www.kucoin.com/" target="_blank"
+                        class="w-inline-block"><img src="65aa502f69daf6c1b20a2469_kuCoin.svg" loading="lazy" alt=""
+                          class="event-banner-buy-logo"></a><a id="launch-app-cta-utm"
+                        href="https://t.me/GTAI_Token_Launch_Bot" target="_blank"
+                        class="btn-primary header-action w-inline-block">
+                        <div class="btn-primary-left w-embed"><svg version="1.2" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 128 18" width="128" height="18">
+                            <path fill="currentColor" stroke="currentColor" class="a"
+                              d="m8.7 2.1c1.1-1.3 2.8-2.1 4.5-2.1h113.3c3.3 0 6 2.7 6 6v28c0 3.3-2.7 6-6 6h-120c-3.4 0-6-2.7-6-6v-19.9c0-1.4 0.4-2.8 1.4-3.9z">
+                            </path>
+                          </svg>
+                          <span class="btn-primary-left-btm"><span></span></span>
+                        </div>
+                        <div class="btn-primary-frame"><img src="65abbbd897271787d4c243f5_arrow-right.svg"
+                            loading="lazy" alt="" class="btn-icon">
+                          <div>Buy $GTAI</div>
+                        </div>
+                      </a></div>
+                  </div>
+                </div>
+                <div class="event-banner-box event-banner-box-1">
+                  <h3 class="event-banner-box-title">Also Available on</h3>
+                  <div class="event-available-list"><a href="https://www.gate.io/" target="_blank"
+                      class="event-available-item w-inline-block"><img src="65ab7a875faa95ea314853db_gate.svg"
+                        loading="lazy" alt="" class="event-available-logo"></a><a href="https://www.bitget.com/"
+                      class="event-available-item w-inline-block"><img src="65ab7a9b97271787d49d2c36_bitget.svg"
+                        loading="lazy" alt="" class="event-available-logo"></a><a href="https://www.mexc.com/"
+                      target="_blank" class="event-available-item w-inline-block"><img
+                        src="65ab7aab10c617827fb438db_mexc.svg" loading="lazy" alt=""
+                        class="event-available-logo"></a><a href="https://pancakeswap.finance/" target="_blank"
+                      class="event-available-item w-inline-block"><img src="65ab7ab7524f9e4d4ba7e10e_pancake.svg"
+                        loading="lazy" alt="" class="event-available-logo"></a></div>
+                </div>
+                <div class="event-banner-box event-banner-box-2">
+                  <h3 class="event-banner-box-title">IDO partners</h3>
+                  <div class="event-partners-list"><a href="https://pad.chaingpt.org/" target="_blank"
+                      class="event-partners-item w-inline-block"><img
+                        src="65ab7b7ed6e8611d02c82371_logo-partner-cgpt.svg" loading="lazy" alt=""
+                        class="event-partners-logo">
+                      <div class="event-partners-name">Chain GPT Pad</div>
+                    </a><a href="https://daomaker.com/" target="_blank" class="event-partners-item w-inline-block"><img
+                        src="65ab7ba305de675192312367_logo-partner-dao-maker.svg" loading="lazy" alt=""
+                        class="event-partners-logo">
+                      <div class="event-partners-name">DAO Maker</div>
+                    </a><a href="https://www.bybit.com/" target="_blank" class="event-partners-item w-inline-block"><img
+                        src="65ab7bb210c617827fb4af42_logo-partner-bybit.svg" loading="lazy" alt=""
+                        class="event-partners-logo">
+                      <div class="event-partners-name">ByBit IDO</div>
+                    </a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-w-id="c81b5371-14fa-2d6e-424f-6329e758a678" class="marquee" style="opacity: 1;">
+            <div class="marquee-title">Trusted by:</div>
+            <div data-marquee="" class="marquee-holder">
+              <ul data-marquee-list="" role="list" class="marquee-list w-list-unstyled">
+                <li class="marquee-item"><a rel="nofollow" href="https://www.kucoin.com/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="65aa502f69daf6c1b20a2469_kuCoin.svg"
+                      loading="eager" alt="" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="http://bybit.com/" target="_blank"
+                    class="marquee-item-link move-up w-inline-block"><img src="65aa5017329f9916165108bb_bybit-logo.svg"
+                      loading="eager" alt="" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://www.animocabrands.com/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="65afe1eb20ff64f95c929afc_Animoca.svg"
+                      loading="eager" alt="" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://shima.capital/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="6571cd8955f9e7f7726159dd_Shima%20Capital.svg"
+                      loading="eager" alt="Shima Capital" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://redswissventurecapital.com/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img
+                      src="6571cd8955f9e7f7726159db_RedSwiss%20Venture%20Capital.svg" loading="eager"
+                      alt="Red Swiss Venture Capital" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://www.binance.com/en/link" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="6571cd8955f9e7f7726159f2_Binance%20Broker.svg"
+                      loading="eager" alt="Binance Broker" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://daomaker.com/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="6571cd8955f9e7f772615a6f_dao-maker-2.svg"
+                      loading="eager" alt="DAO Maker" class="marquee-item-logo logo-size-md"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://www.chaingpt.org/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="6571cd8955f9e7f772615a1f_Frame%201991422563.svg"
+                      loading="eager" alt="ChainGPT" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://www.marshlandcapital.com/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="65a10d9a51865c443e8d98c6_marshland.svg"
+                      loading="eager" alt="Marshland" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://naka.ventures/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="65afe2423f25370d961da639_naka.svg"
+                      loading="eager" alt="" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://www.gate.io/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="65afe2adec2d6f2f9034a07e_GateIO.svg"
+                      loading="eager" alt="" class="marquee-item-logo"></a></li>
+              </ul>
+              <ul data-marquee-list="" role="list" class="marquee-list w-list-unstyled">
+                <li class="marquee-item"><a rel="nofollow" href="https://www.kucoin.com/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="65aa502f69daf6c1b20a2469_kuCoin.svg"
+                      loading="eager" alt="" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="http://bybit.com/" target="_blank"
+                    class="marquee-item-link move-up w-inline-block"><img src="65aa5017329f9916165108bb_bybit-logo.svg"
+                      loading="eager" alt="" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://www.animocabrands.com/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="65afe1eb20ff64f95c929afc_Animoca.svg"
+                      loading="eager" alt="" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://shima.capital/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="6571cd8955f9e7f7726159dd_Shima%20Capital.svg"
+                      loading="eager" alt="Shima Capital" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://redswissventurecapital.com/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img
+                      src="6571cd8955f9e7f7726159db_RedSwiss%20Venture%20Capital.svg" loading="eager"
+                      alt="Red Swiss Venture Capital" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://www.binance.com/en/link" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="6571cd8955f9e7f7726159f2_Binance%20Broker.svg"
+                      loading="eager" alt="Binance Broker" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://daomaker.com/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="6571cd8955f9e7f772615a6f_dao-maker-2.svg"
+                      loading="eager" alt="DAO Maker" class="marquee-item-logo logo-size-md"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://www.chaingpt.org/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="6571cd8955f9e7f772615a1f_Frame%201991422563.svg"
+                      loading="eager" alt="ChainGPT" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://www.marshlandcapital.com/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="65a10d9a51865c443e8d98c6_marshland.svg"
+                      loading="eager" alt="Marshland" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://naka.ventures/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="65afe2423f25370d961da639_naka.svg"
+                      loading="eager" alt="" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://www.gate.io/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="65afe2adec2d6f2f9034a07e_GateIO.svg"
+                      loading="eager" alt="" class="marquee-item-logo"></a></li>
+              </ul>
+              <ul data-marquee-list="" role="list" class="marquee-list w-list-unstyled">
+                <li class="marquee-item"><a rel="nofollow" href="https://www.kucoin.com/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="65aa502f69daf6c1b20a2469_kuCoin.svg"
+                      loading="eager" alt="" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="http://bybit.com/" target="_blank"
+                    class="marquee-item-link move-up w-inline-block"><img src="65aa5017329f9916165108bb_bybit-logo.svg"
+                      loading="eager" alt="" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://www.animocabrands.com/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="65afe1eb20ff64f95c929afc_Animoca.svg"
+                      loading="eager" alt="" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://shima.capital/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="6571cd8955f9e7f7726159dd_Shima%20Capital.svg"
+                      loading="eager" alt="Shima Capital" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://redswissventurecapital.com/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img
+                      src="6571cd8955f9e7f7726159db_RedSwiss%20Venture%20Capital.svg" loading="eager"
+                      alt="Red Swiss Venture Capital" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://www.binance.com/en/link" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="6571cd8955f9e7f7726159f2_Binance%20Broker.svg"
+                      loading="eager" alt="Binance Broker" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://daomaker.com/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="6571cd8955f9e7f772615a6f_dao-maker-2.svg"
+                      loading="eager" alt="DAO Maker" class="marquee-item-logo logo-size-md"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://www.chaingpt.org/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="6571cd8955f9e7f772615a1f_Frame%201991422563.svg"
+                      loading="eager" alt="ChainGPT" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://www.marshlandcapital.com/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="65a10d9a51865c443e8d98c6_marshland.svg"
+                      loading="eager" alt="Marshland" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://naka.ventures/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="65afe2423f25370d961da639_naka.svg"
+                      loading="eager" alt="" class="marquee-item-logo"></a></li>
+                <li class="marquee-item"><a rel="nofollow" href="https://www.gate.io/" target="_blank"
+                    class="marquee-item-link w-inline-block"><img src="65afe2adec2d6f2f9034a07e_GateIO.svg"
+                      loading="eager" alt="" class="marquee-item-logo"></a></li>
+              </ul>
+              <div class="marquee-shadow"></div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-shadow"></div>
+      </main>
+      <section class="video-section">
+        <div class="section-label-left">
+          <div class="section-label">
+            <div class="section-label-top"></div>
+            <div class="section-label-text">Introduction</div>
+            <div class="section-label-bottom"></div>
+          </div>
+        </div>
+        <div class="video-area">
+          <div style="padding-top:56.17021276595745%" class="w-embed-youtubevideo"><iframe src="index_4.html"
+              frameborder="0" style="position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:auto"
+              allow="autoplay; encrypted-media" allowfullscreen=""
+              title="GT Protocol Asia Roadshow: A Journey to Remember!"></iframe></div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="footer-outer-wrapper">
+    <footer class="footer">
+      <div class="w-embed">
+        <style>
+          .footer .text-link.nav-link-text:before {
+            display: none;
+          }
+
+          .social-m-item:hover .social-m-item-text {
+            color: #58C0FF;
+          }
+
+          .social-m-item:hover .aside-media-icon path {
+            fill: #58C0FF;
+          }
+
+          .social-m-item:hover .aside-media-icon-gecko path {
+            fill: #58C0FF;
+            stroke: #58C0FF;
+          }
+
+          .social-m-item:hover .aside-media-icon-gecko rect {
+            stroke: #58C0FF;
+          }
+        </style>
+      </div>
+      <div class="footer-container">
+        <div class="footer-wrapper">
+          <div class="footer-top">
+            <div class="footer-block top-block"><img src="6571cd8955f9e7f772615986_logo.svg" loading="eager" alt=""
+                class="logo footer-logo">
+              <p class="footer-text">A conversational Web3 Crypto AI execution technology that provides you with access
+                to CeFi, DeFi, and NFT crypto markets through an all-in-one conversational AI interface.</p>
+            </div>
+          </div>
+          <div class="footer-main">
+            <div class="footer-block"><img src="6571cd8955f9e7f772615986_logo.svg" loading="eager" alt=""
+                class="logo footer-logo">
+              <p class="footer-text">A conversational Web3 Crypto AI execution technology that provides you with access
+                to CeFi, DeFi, and NFT crypto markets through an all-in-one conversational AI interface.</p>
+            </div>
+            <div id="w-node-_9f0d7ef4-114b-3306-53f0-fb110d4a3c5c-0d4a3c4f" class="footer-socials-block">
+              <div class="footer-block-title">Socials</div>
+              <ul role="list" class="footer-socials w-list-unstyled">
+                <li><a rel="nofollow" href="https://t.me/GTProtocolNews" target="_blank"
+                    class="link-block social-m-item w-inline-block">
+                    <div class="html-embed w-embed"><svg width="24" height="24" class="aside-media-icon"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M22.2076 2.45514C22.0914 2.3548 21.95 2.28806 21.7987 2.26213C21.6474 2.23619 21.4919 2.25203 21.3489 2.30795L2.34949 9.74327C2.08023 9.84797 1.85226 10.0373 1.69992 10.2828C1.54758 10.5283 1.4791 10.8166 1.5048 11.1043C1.5305 11.3921 1.64898 11.6637 1.84241 11.8783C2.03584 12.0929 2.29375 12.2389 2.5773 12.2942L7.50011 13.2608V18.7498C7.49915 19.0488 7.588 19.3412 7.75515 19.5891C7.92231 19.837 8.16007 20.029 8.43761 20.1401C8.71473 20.2533 9.01949 20.2805 9.31225 20.2181C9.60501 20.1557 9.87224 20.0067 10.0792 19.7905L12.4529 17.3286L16.2189 20.6248C16.4906 20.8658 16.841 20.9992 17.2042 20.9998C17.3633 20.9997 17.5215 20.9747 17.6729 20.9258C17.9204 20.8472 18.1429 20.7053 18.3184 20.514C18.494 20.3227 18.6163 20.0887 18.6732 19.8355L22.4786 3.28108C22.5126 3.13178 22.5054 2.97603 22.4576 2.83053C22.4099 2.68503 22.3235 2.55527 22.2076 2.45514ZM16.4757 5.83014L8.07668 11.8451L3.42668 10.933L16.4757 5.83014ZM9.00011 18.7498V14.2986L11.3242 16.3367L9.00011 18.7498ZM17.2061 19.4998L9.4548 12.703L20.6111 4.70702L17.2061 19.4998Z"
+                          fill="white"></path>
+                      </svg></div>
+                    <div class="social-m-item-text">News Channel</div>
+                  </a></li>
+                <li><a rel="nofollow" href="https://t.me/GTProtocol" target="_blank"
+                    class="link-block social-m-item w-inline-block">
+                    <div class="html-embed w-embed"><svg width="24" height="24" class="aside-media-icon"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M22.2076 2.45514C22.0914 2.3548 21.95 2.28806 21.7987 2.26213C21.6474 2.23619 21.4919 2.25203 21.3489 2.30795L2.34949 9.74327C2.08023 9.84797 1.85226 10.0373 1.69992 10.2828C1.54758 10.5283 1.4791 10.8166 1.5048 11.1043C1.5305 11.3921 1.64898 11.6637 1.84241 11.8783C2.03584 12.0929 2.29375 12.2389 2.5773 12.2942L7.50011 13.2608V18.7498C7.49915 19.0488 7.588 19.3412 7.75515 19.5891C7.92231 19.837 8.16007 20.029 8.43761 20.1401C8.71473 20.2533 9.01949 20.2805 9.31225 20.2181C9.60501 20.1557 9.87224 20.0067 10.0792 19.7905L12.4529 17.3286L16.2189 20.6248C16.4906 20.8658 16.841 20.9992 17.2042 20.9998C17.3633 20.9997 17.5215 20.9747 17.6729 20.9258C17.9204 20.8472 18.1429 20.7053 18.3184 20.514C18.494 20.3227 18.6163 20.0887 18.6732 19.8355L22.4786 3.28108C22.5126 3.13178 22.5054 2.97603 22.4576 2.83053C22.4099 2.68503 22.3235 2.55527 22.2076 2.45514ZM16.4757 5.83014L8.07668 11.8451L3.42668 10.933L16.4757 5.83014ZM9.00011 18.7498V14.2986L11.3242 16.3367L9.00011 18.7498ZM17.2061 19.4998L9.4548 12.703L20.6111 4.70702L17.2061 19.4998Z"
+                          fill="white"></path>
+                      </svg></div>
+                    <div class="social-m-item-text">Community Group</div>
+                  </a></li>
+                <li><a rel="nofollow" href="https://twitter.com/gt_protocol" target="_blank"
+                    class="link-block social-m-item w-inline-block">
+                    <div class="html-embed w-embed"><svg width="24" height="24" class="aside-media-icon"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M23.1931 6.4635C23.1363 6.32645 23.0402 6.2093 22.9169 6.12686C22.7936 6.04443 22.6486 6.00041 22.5002 6.00038H19.6474C19.2486 5.3218 18.6809 4.75796 17.9997 4.3637C17.3184 3.96943 16.5467 3.75814 15.7596 3.75038C15.1732 3.74269 14.5912 3.85235 14.0478 4.07293C13.5045 4.2935 13.0107 4.62052 12.5956 5.03475C12.1683 5.45402 11.8292 5.95449 11.5982 6.50671C11.3671 7.05893 11.2488 7.65178 11.2502 8.25038V8.82132C7.47587 7.82569 4.38868 4.75538 4.35587 4.72257C4.25525 4.62105 4.12772 4.55041 3.98829 4.51895C3.84887 4.48749 3.70335 4.49652 3.56889 4.54499C3.43443 4.59345 3.31662 4.67933 3.22932 4.79251C3.14203 4.90569 3.0889 5.04145 3.07618 5.18382C2.67212 9.66413 3.97337 12.6623 5.13868 14.3882C5.70688 15.2414 6.3981 16.0059 7.18993 16.6569C5.76212 18.3004 3.51399 19.1638 3.48962 19.1732C3.38379 19.2128 3.28828 19.2759 3.21024 19.3576C3.1322 19.4393 3.07363 19.5377 3.03893 19.6452C3.00422 19.7528 2.99426 19.8668 3.00981 19.9787C3.02535 20.0906 3.06599 20.1976 3.12868 20.2916C3.19899 20.3966 3.48024 20.7651 4.16743 21.1091C5.01681 21.5348 6.13899 21.7504 7.50024 21.7504C14.1256 21.7504 19.6615 16.6485 20.2268 10.0841L23.0309 7.281C23.1357 7.17606 23.2071 7.04237 23.236 6.89686C23.2648 6.75134 23.2499 6.60053 23.1931 6.4635ZM18.9743 9.22069C18.8457 9.34959 18.7684 9.52087 18.7568 9.70257C18.3752 15.6173 13.4327 20.2504 7.50024 20.2504C6.51024 20.2504 5.81274 20.1191 5.32337 19.9616C6.40243 19.3757 7.90712 18.3679 8.87462 16.9166C8.9314 16.8313 8.97009 16.7352 8.9883 16.6344C9.00651 16.5335 9.00384 16.4299 8.98047 16.3301C8.9571 16.2303 8.91353 16.1364 8.85243 16.0541C8.79133 15.9718 8.71401 15.9029 8.62524 15.8516C8.58118 15.8263 4.50868 13.3823 4.50024 6.85163C6.00024 8.07038 8.74243 9.96132 11.8756 10.4882C11.9829 10.5063 12.093 10.5008 12.198 10.4721C12.3031 10.4434 12.4006 10.3921 12.4838 10.3219C12.5671 10.2517 12.634 10.1642 12.68 10.0655C12.726 9.96681 12.75 9.85927 12.7502 9.75038V8.25038C12.7494 7.8503 12.8286 7.45409 12.9832 7.08508C13.1377 6.71606 13.3645 6.38168 13.6502 6.10163C13.9241 5.82722 14.2503 5.6105 14.6094 5.46429C14.9684 5.31808 15.3532 5.24535 15.7409 5.25038C16.9277 5.26538 18.0368 5.98913 18.5009 7.05132C18.5594 7.18486 18.6555 7.29846 18.7776 7.37821C18.8996 7.45797 19.0423 7.50042 19.1881 7.50038H20.6881L18.9743 9.22069Z"
+                          fill="white"></path>
+                      </svg></div>
+                    <div class="social-m-item-text">Twitter</div>
+                  </a></li>
+                <li><a rel="nofollow" href="https://www.linkedin.com/company/gtprotocol" target="_blank"
+                    class="link-block social-m-item w-inline-block">
+                    <div class="html-embed w-embed"><svg width="24" height="24" class="aside-media-icon"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M20.25 2.25H3.75C3.35218 2.25 2.97064 2.40804 2.68934 2.68934C2.40804 2.97064 2.25 3.35218 2.25 3.75V20.25C2.25 20.6478 2.40804 21.0294 2.68934 21.3107C2.97064 21.592 3.35218 21.75 3.75 21.75H20.25C20.6478 21.75 21.0294 21.592 21.3107 21.3107C21.592 21.0294 21.75 20.6478 21.75 20.25V3.75C21.75 3.35218 21.592 2.97064 21.3107 2.68934C21.0294 2.40804 20.6478 2.25 20.25 2.25ZM20.25 20.25H3.75V3.75H20.25V20.25ZM9 10.5V16.5C9 16.6989 8.92098 16.8897 8.78033 17.0303C8.63968 17.171 8.44891 17.25 8.25 17.25C8.05109 17.25 7.86032 17.171 7.71967 17.0303C7.57902 16.8897 7.5 16.6989 7.5 16.5V10.5C7.5 10.3011 7.57902 10.1103 7.71967 9.96967C7.86032 9.82902 8.05109 9.75 8.25 9.75C8.44891 9.75 8.63968 9.82902 8.78033 9.96967C8.92098 10.1103 9 10.3011 9 10.5ZM17.25 13.125V16.5C17.25 16.6989 17.171 16.8897 17.0303 17.0303C16.8897 17.171 16.6989 17.25 16.5 17.25C16.3011 17.25 16.1103 17.171 15.9697 17.0303C15.829 16.8897 15.75 16.6989 15.75 16.5V13.125C15.75 12.6277 15.5525 12.1508 15.2008 11.7992C14.8492 11.4475 14.3723 11.25 13.875 11.25C13.3777 11.25 12.9008 11.4475 12.5492 11.7992C12.1975 12.1508 12 12.6277 12 13.125V16.5C12 16.6989 11.921 16.8897 11.7803 17.0303C11.6397 17.171 11.4489 17.25 11.25 17.25C11.0511 17.25 10.8603 17.171 10.7197 17.0303C10.579 16.8897 10.5 16.6989 10.5 16.5V10.5C10.5009 10.3163 10.5693 10.1393 10.692 10.0026C10.8148 9.86596 10.9834 9.7791 11.166 9.75852C11.3485 9.73794 11.5323 9.78508 11.6824 9.891C11.8325 9.99691 11.9385 10.1542 11.9803 10.3331C12.4877 9.98894 13.0792 9.78947 13.6914 9.75611C14.3036 9.72276 14.9133 9.85679 15.455 10.1438C15.9968 10.4308 16.4501 10.86 16.7664 11.3852C17.0826 11.9105 17.2498 12.5119 17.25 13.125ZM9.375 7.875C9.375 8.0975 9.30902 8.31501 9.1854 8.50002C9.06179 8.68502 8.88609 8.82922 8.68052 8.91436C8.47495 8.99951 8.24875 9.02179 8.03052 8.97838C7.81229 8.93498 7.61184 8.82783 7.4545 8.6705C7.29717 8.51316 7.19002 8.31271 7.14662 8.09448C7.10321 7.87625 7.12549 7.65005 7.21064 7.44448C7.29578 7.23891 7.43998 7.06321 7.62498 6.9396C7.80999 6.81598 8.0275 6.75 8.25 6.75C8.54837 6.75 8.83452 6.86853 9.0455 7.0795C9.25647 7.29048 9.375 7.57663 9.375 7.875Z"
+                          fill="white"></path>
+                      </svg></div>
+                    <div class="social-m-item-text">Linkedin</div>
+                  </a></li>
+                <li><a rel="nofollow" href="https://medium.com/@gt-protocol" target="_blank"
+                    class="link-block social-m-item w-inline-block">
+                    <div class="html-embed w-embed"><svg width="24" height="24" class="aside-media-icon"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M6.75 6C5.56332 6 4.40328 6.35189 3.41658 7.01118C2.42989 7.67047 1.66085 8.60754 1.20673 9.7039C0.7526 10.8003 0.63378 12.0067 0.865291 13.1705C1.0968 14.3344 1.66825 15.4035 2.50736 16.2426C3.34648 17.0818 4.41558 17.6532 5.57946 17.8847C6.74335 18.1162 7.94975 17.9974 9.0461 17.5433C10.1425 17.0892 11.0795 16.3201 11.7388 15.3334C12.3981 14.3467 12.75 13.1867 12.75 12C12.7483 10.4092 12.1156 8.88412 10.9907 7.75928C9.86588 6.63444 8.34077 6.00174 6.75 6ZM6.75 16.5C5.85999 16.5 4.98996 16.2361 4.24994 15.7416C3.50992 15.2471 2.93314 14.5443 2.59254 13.7221C2.25195 12.8998 2.16284 11.995 2.33647 11.1221C2.5101 10.2492 2.93869 9.44736 3.56802 8.81802C4.19736 8.18868 4.99918 7.7601 5.8721 7.58647C6.74501 7.41283 7.64981 7.50195 8.47208 7.84254C9.29435 8.18314 9.99715 8.75991 10.4916 9.49993C10.9861 10.24 11.25 11.11 11.25 12C11.2488 13.1931 10.7743 14.337 9.93061 15.1806C9.08697 16.0243 7.9431 16.4988 6.75 16.5ZM17.25 6C16.7175 6 15.7125 6.25875 14.97 7.99219C14.5059 9.075 14.25 10.5 14.25 12C14.25 13.5 14.5059 14.925 14.97 16.0078C15.7125 17.7413 16.7175 18 17.25 18C17.7825 18 18.7875 17.7413 19.53 16.0078C19.9941 14.925 20.25 13.5 20.25 12C20.25 10.5 19.9941 9.075 19.53 7.99219C18.7875 6.25875 17.7825 6 17.25 6ZM17.25 16.5C16.7213 16.5 15.75 14.7919 15.75 12C15.75 9.20812 16.7213 7.5 17.25 7.5C17.7788 7.5 18.75 9.20812 18.75 12C18.75 14.7919 17.7788 16.5 17.25 16.5ZM23.25 6.75V17.25C23.25 17.4489 23.171 17.6397 23.0303 17.7803C22.8897 17.921 22.6989 18 22.5 18C22.3011 18 22.1103 17.921 21.9697 17.7803C21.829 17.6397 21.75 17.4489 21.75 17.25V6.75C21.75 6.55109 21.829 6.36032 21.9697 6.21967C22.1103 6.07902 22.3011 6 22.5 6C22.6989 6 22.8897 6.07902 23.0303 6.21967C23.171 6.36032 23.25 6.55109 23.25 6.75Z"
+                          fill="white"></path>
+                      </svg></div>
+                    <div class="social-m-item-text">Medium</div>
+                  </a></li>
+                <li><a rel="nofollow" href="https://www.youtube.com/@gtprotocol" target="_blank"
+                    class="link-block social-m-item w-inline-block">
+                    <div class="html-embed w-embed"><svg width="24" height="24" class="aside-media-icon"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M15.4163 11.3756L10.9163 8.37563C10.8033 8.30025 10.6719 8.25697 10.5363 8.2504C10.4006 8.24382 10.2657 8.27421 10.146 8.33831C10.0263 8.40241 9.9262 8.49783 9.85645 8.61436C9.7867 8.7309 9.74991 8.86419 9.75 9V15C9.74991 15.1358 9.7867 15.2691 9.85645 15.3856C9.9262 15.5022 10.0263 15.5976 10.146 15.6617C10.2657 15.7258 10.4006 15.7562 10.5363 15.7496C10.6719 15.743 10.8033 15.6998 10.9163 15.6244L15.4163 12.6244C15.5191 12.5559 15.6035 12.4631 15.6618 12.3542C15.7202 12.2452 15.7507 12.1236 15.7507 12C15.7507 11.8764 15.7202 11.7548 15.6618 11.6458C15.6035 11.5369 15.5191 11.4441 15.4163 11.3756ZM11.25 13.5984V10.4063L13.6481 12L11.25 13.5984ZM21.9684 6.5175C21.8801 6.17189 21.7109 5.85224 21.4747 5.58491C21.2385 5.31758 20.9421 5.11024 20.61 4.98C17.3962 3.73875 12.2812 3.75 12 3.75C11.7188 3.75 6.60375 3.73875 3.39 4.98C3.0579 5.11024 2.76153 5.31758 2.52534 5.58491C2.28915 5.85224 2.1199 6.17189 2.03156 6.5175C1.78875 7.45313 1.5 9.16313 1.5 12C1.5 14.8369 1.78875 16.5469 2.03156 17.4825C2.11977 17.8283 2.28895 18.1481 2.52515 18.4156C2.76136 18.6831 3.0578 18.8906 3.39 19.0209C6.46875 20.2088 11.2875 20.25 11.9381 20.25H12.0619C12.7125 20.25 17.5341 20.2088 20.61 19.0209C20.9422 18.8906 21.2386 18.6831 21.4748 18.4156C21.711 18.1481 21.8802 17.8283 21.9684 17.4825C22.2113 16.545 22.5 14.8369 22.5 12C22.5 9.16313 22.2113 7.45313 21.9684 6.5175ZM20.5163 17.1113C20.4877 17.2263 20.4323 17.3329 20.3545 17.4224C20.2768 17.5118 20.179 17.5816 20.0691 17.6259C17.1019 18.7716 12.0553 18.7509 12.0066 18.7509H12C11.9494 18.7509 6.90656 18.7697 3.9375 17.6259C3.8276 17.5816 3.72977 17.5118 3.65204 17.4224C3.57431 17.3329 3.51888 17.2263 3.49031 17.1113C3.2625 16.2553 3 14.6784 3 12C3 9.32157 3.2625 7.74469 3.48375 6.89344C3.51179 6.77774 3.56697 6.67037 3.64473 6.58022C3.7225 6.49007 3.8206 6.41972 3.93094 6.375C6.79219 5.26969 11.5866 5.25 11.9794 5.25H12.0047C12.0553 5.25 17.1028 5.23313 20.0672 6.375C20.1771 6.41936 20.2749 6.48913 20.3526 6.57859C20.4304 6.66806 20.4858 6.77467 20.5144 6.88969C20.7375 7.74469 21 9.32157 21 12C21 14.6784 20.7375 16.2553 20.5163 17.1066V17.1113Z"
+                          fill="white"></path>
+                      </svg></div>
+                    <div class="social-m-item-text">YouTube</div>
+                  </a></li>
+                <li><a rel="nofollow" href="https://coinmarketcap.com/currencies/gt-protocol/" target="_blank"
+                    class="link-block social-m-item w-inline-block">
+                    <div class="html-embed w-embed"><svg width="24" height="24" class="aside-media-icon"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1373_255)">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M20.7368 14.3415C20.3153 14.6049 19.8236 14.64 19.449 14.4293C18.9748 14.16 18.7114 13.5337 18.7114 12.6556V10.039C18.7114 8.77463 18.2138 7.87317 17.3768 7.63317C15.9602 7.22341 14.8948 8.9561 14.4968 9.60585L11.9972 13.6566V8.70439C11.968 7.56293 11.5992 6.8839 10.8968 6.67902C10.4343 6.54439 9.73773 6.59707 9.05871 7.63317L3.46261 16.6127C2.71335 15.1902 2.32115 13.6039 2.327 12C2.327 6.58537 6.66457 2.18341 11.9972 2.18341C17.3299 2.18341 21.6675 6.58537 21.6675 12C21.6675 12.0117 21.6675 12.0176 21.6733 12.0293C21.6733 12.041 21.6733 12.0468 21.6733 12.0585C21.7202 13.1005 21.3807 13.9376 20.7368 14.3415ZM23.8216 12V11.9707V11.9415C23.7865 5.35024 18.5007 0 11.9972 0C5.48213 0 0.178711 5.38537 0.178711 12C0.178711 18.6146 5.48213 24 11.9972 24C14.9885 24 17.8451 22.8644 20.0343 20.798C20.4675 20.3883 20.4968 19.6976 20.0929 19.2585C19.7007 18.8254 19.0275 18.7902 18.5885 19.1824C18.5826 19.1883 18.5768 19.1941 18.5709 19.2C16.7972 20.88 14.4441 21.8166 11.9972 21.8166C9.14066 21.8166 6.57091 20.5522 4.8031 18.5502L9.84896 10.4429V14.1776C9.84896 15.9746 10.5455 16.5541 11.1309 16.7239C11.7163 16.8937 12.606 16.7766 13.5426 15.2546L16.3172 10.7532C16.4051 10.6068 16.487 10.4839 16.5631 10.3727V12.6498C16.5631 14.3298 17.2363 15.6702 18.407 16.3317C19.4607 16.9288 20.7894 16.8761 21.8724 16.1912C23.1836 15.3659 23.8919 13.838 23.8216 12Z"
+                            fill="white"></path>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_1373_255">
+                            <rect width="23.6429" height="24" fill="white" transform="translate(0.178711)"></rect>
+                          </clipPath>
+                        </defs>
+                      </svg></div>
+                    <div class="social-m-item-text">CoinMarketCap</div>
+                  </a></li>
+              </ul>
+            </div>
+            <div class="footer-nav">
+              <div class="footer-block-title">Navigation</div>
+              <ul role="list" class="nav-list footer-nav w-list-unstyled">
+                <li class="nav-link"><a href="#use-cases" class="text-link nav-link-text footer-nav-text">Use Cases</a>
+                </li>
+                <li class="nav-link"><a href="#technology"
+                    class="text-link nav-link-text footer-nav-text">Technology</a></li>
+                <li class="nav-link"><a href="#track-record" class="text-link nav-link-text footer-nav-text">Track
+                    Record</a></li>
+                <li class="nav-link"><a href="#partners" class="text-link nav-link-text footer-nav-text">Partners</a>
+                </li>
+                <li class="nav-link"><a href="#team" class="text-link nav-link-text footer-nav-text">Team</a></li>
+                <li class="nav-link"><a href="https://www.gt-protocol.io/jobs" target="_blank"
+                    class="text-link nav-link-text footer-nav-text">Jobs</a></li>
+              </ul>
+            </div>
+            <div id="w-node-_9f0d7ef4-114b-3306-53f0-fb110d4a3cb0-0d4a3c4f" class="footer-contact">
+              <div class="footer-block-title">Contacts</div>
+              <ul role="list" class="nav-list footer-nav w-list-unstyled">
+                <li class="nav-link"><a href="https://www.gt-protocol.io/contact-us" target="_blank"
+                    class="text-link nav-link-text footer-nav-text">Contact us</a></li>
+                <li class="nav-link"><a href="mailto:contact@gt-protocol.io"
+                    class="text-link nav-link-text footer-nav-text">contact@gt-protocol.io</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="footer-bottom-l"><a href="https://www.gt-protocol.io/privacy-policy"
+                class="text-link footer-credits-link">Privacy policy</a><a
+                href="https://www.gt-protocol.io/terms-of-service" class="text-link footer-credits-link">Terms of
+                service</a></div>
+            <div class="footer-rights">Copyright ©2023 GT Protocol. All rights reserved.</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div style="display: none; opacity: 0;" class="about-video-popup">
+    <div data-w-id="a950d862-b4d8-4f02-9788-58e1799e2adb" class="about-popup-close-sign html-embed">
+      <div data-w-id="47f3c9ce-65ac-3d3a-cd63-6e05fbe44964" class="w-embed"><svg width="13" height="13"
+          viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.39892 0.312707L12.5903 11.5903L11.1913 13L0 1.72241L1.39892 0.312707Z" fill="#D9D9D9"></path>
+          <path d="M0.409734 11.2776L11.6011 0L13 1.4097L1.80865 12.6873L0.409734 11.2776Z" fill="#D9D9D9"></path>
+        </svg></div>
+    </div>
+    <div style="padding-top:56.17021276595745%" class="w-embed-youtubevideo about-popup-video-screen"><iframe
+        src="index_3.html" frameborder="0"
+        style="position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:auto"
+        allow="autoplay; encrypted-media" allowfullscreen="" title="GT Protocol AI execution technology"></iframe></div>
+  </div><!-- MOMENT.JS -->
+
+  <!-- MOMENT.JS TIMEZONE DATA -->
+
+
+  <!--script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.23/bundled/lenis.min.js"></script -->
+
+
+
+
+  <iframe id="_hjSafeContext_26005954" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="index_1.html"
+    style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe>
+  <noscript>
+    <img height="1" width="1" style="display:none;" alt="" src="collect.gif">
+  </noscript>
+
+  <noscript><img height="1" width="1" style="display:none" src="tr.txt"></noscript>
+
+
+  <noscript>
+    <div><img src="1.gif" style="position:absolute; left:-9999px;" alt=""></div>
+  </noscript>
+</body>
+
+</html>
